@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pedido</title>
+    <style media="screen">
+    *{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      font-family: montserrat;
+      box-sizing: border-box;
+    }
+
+
+    body{
+      min-height: 127vh;
+      background: linear-gradient(#964b00,#964b00);
+    }
+
+    #a{
+      margin-left: 10px;
+
+    }
+
+    .login-form{
+      width: 50%;
+      background: linear-gradient(100deg,#754c2d,#804c22);
+      height: 120%;
+      padding: 80px 40px;
+      border-radius: 8px;
+      position: absolute;
+      left: 50%;
+      top: 63%;
+      transform: translate(-50%,-50%);
+
+
+
+    }
+
+    .login-form h1{
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    #vo{
+      color: #ecf0f1;
+      margin-left:10px;
+
+    }
+    #vo : hover{
+     color: black;
+    }
+
+    #img{
+    margin-bottom: 5px;
+    margin-left: 7px;
+    }
+     #img2{
+
+    margin-left: 7px;
+    }
+    #img3{
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
+    #img4{
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
+    #img5{
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
+    #img6{
+      margin-bottom: 5px;
+      margin-left: 7px;
+    }
+
+    </style>
+
+
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+
+
+  <body>
+      <a href="/" id="a"><img src="back.png" height="20" width="20"></a>
+
+      <form action="/cada" class="login-form" method="GET" th:object="${comidas}">
+        <h1>Fazer Pedido</h1>
+
+
+        <div class="form-group col-md-3">
+          <img src="https://image.flaticon.com/icons/svg/490/490357.svg" width="42" height="43" id="img2">
+          <input type="number" class="form-control" id="mesa" name="mesa" placeholder="Mesa">
+        </div>
+
+ 
+    <img src="https://image.flaticon.com/icons/svg/1477/1477728.svg" width="40" height="40" id="img4">
+ <div class="form-row">
+  <div class="form-group col-md-10">
+      <select class="form-control" id="rfg" name="rfg">
+        <option>Refrigerante...</option>
+        <option value="Lanches">Guarána 1l</option>
+        <option value="Lanches">Guarána 2l</option>
+        <option value="Bebidas">Coca Cola 1l</option>
+        <option value="Bebidas">Coca Cola 2l</option>
+        <option value="Massas">Fanta 1l</option>
+        <option value="Massas">Fanta 2l</option>
+        <option value="Massas">Cajuina 1l</option>
+        <option value="Massas">Cajuina 2l</option>
+        <option value="Massas">Soda 1l</option>
+        <option value="Massas">Soda 2l</option>
+        <option value="Massas">Nenhum</option>
+        
+
+
+      </select>
+    </div>
+          <div class="form-group col-md-2">
+      <select class="form-control" id="qtdC" name="rfg">
+        <option>Qtd...</option>
+        <option value="Lanches">0</option>
+        <option value="Lanches">1</option>
+        <option value="Lanches">2</option>
+        <option value="Bebidas">3</option>
+        <option value="Bebidas">4</option>
+        <option value="Massas">5</option>
+        <option value="Massas">6</option>
+        <option value="Massas">7</option>
+        <option value="Massas">8</option>
+        <option value="Massas">9</option>
+      </select>
+    </div>
+</div>
+
+    <img src="https://image.flaticon.com/icons/svg/1651/1651868.svg" width="40" height="40" id="img5">
+ <div class="form-row">
+  <div class="form-group col-md-10">
+      <select class="form-control" id="crv" name="crv">
+        <option>Cerveja...</option>
+        <option value="Lanches">Bohemia</option>
+        <option value="Lanches">Legitima</option>
+        <option value="Bebidas">Petra</option>
+        <option value="Bebidas">Crystal</option>
+        <option value="Massas">Skol</option>
+        <option value="Massas">Brahma</option>
+        <option value="Massas">Skol Beats</option>
+        <option value="Massas">Heineken</option>
+        <option value="Massas">Nenhuma</option>
+      </select>
+    </div>
+      <div class="form-group col-md-2">
+      <select class="form-control" id="qtdC" name="rfg">
+        <option>Qtd...</option>
+        <option value="Lanches">0</option>
+        <option value="Lanches">1</option>
+        <option value="Lanches">2</option>
+        <option value="Bebidas">3</option>
+        <option value="Bebidas">4</option>
+        <option value="Massas">5</option>
+        <option value="Massas">6</option>
+        <option value="Massas">7</option>
+        <option value="Massas">8</option>
+        <option value="Massas">9</option>
+      </select>
+    </div>
+</div>
+
+
+
+    <img src="https://image.flaticon.com/icons/svg/113/113339.svg" width="40" height="40" id="img6">
+	 <div class="form-row">
+  <div class="form-group col-md-10">
+      <select class="form-control" id="tiraGosto" name="tiraGosto">
+        <option>Tira Gosto...</option>
+        <option value="Lanches">Baião</option>
+        <option value="Lanches">Frango Assado</option>
+        <option value="Bebidas">Boi Assado</option>
+        <option value="Bebidas">Linguiça Assada</option>
+        <option value="Massas">Porco Assado</option>
+        <option value="Massas">Filé Trinchado</option>
+        <option value="Massas">Tripa</option>
+        <option value="Massas">Camarão</option>
+        <option value="Massas">Nenhum</option>    
+      </select>
+    </div>
+          <div class="form-group col-md-2">
+      <select class="form-control" id="qtdC" name="rfg">
+        <option>Qtd...</option>
+        <option value="Lanches">0</option>
+        <option value="Lanches">1</option>
+        <option value="Lanches">2</option>
+        <option value="Bebidas">3</option>
+        <option value="Bebidas">4</option>
+        <option value="Massas">5</option>
+        <option value="Massas">6</option>
+        <option value="Massas">7</option>
+        <option value="Massas">8</option>
+        <option value="Massas">9</option>
+      </select>
+    </div>
+</div>
+
+    <img src="https://image.flaticon.com/icons/svg/113/113339.svg" width="40" height="40" id="img6">
+	 <div class="form-row">
+  <div class="form-group col-md-10">
+      <select class="form-control" id="tiraGosto" name="tiraGosto">
+        <option>Tira Gosto 2...</option>
+        <option value="Lanches">Baião</option>
+        <option value="Lanches">Frango Assado</option>
+        <option value="Bebidas">Boi Assado</option>
+        <option value="Bebidas">Linguiça Assada</option>
+        <option value="Massas">Porco Assado</option>
+        <option value="Massas">Filé Trinchado</option>
+        <option value="Massas">Tripa</option>
+        <option value="Massas">Camarão</option>
+        <option value="Massas">Nenhum</option>    
+      </select>
+    </div>
+          <div class="form-group col-md-2">
+      <select class="form-control" id="qtdC" name="rfg">
+        <option>Qtd...</option>
+        <option value="Lanches">0</option>
+        <option value="Lanches">1</option>
+        <option value="Lanches">2</option>
+        <option value="Bebidas">3</option>
+        <option value="Bebidas">4</option>
+        <option value="Massas">5</option>
+        <option value="Massas">6</option>
+        <option value="Massas">7</option>
+        <option value="Massas">8</option>
+        <option value="Massas">9</option>
+      </select>
+    </div>
+</div>
+
+   
+
+
+    <div>
+  <label >Antes de enviar o pedido, certifique-se de que escreveu corretamente e de forma coerente</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Fazer pedido</button>
+</form>
+
+
+      <script type="text/javascript">
+      $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+      });
+
+      $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+      });
+
+      </script>
+
+
+  </body>
+</html>
